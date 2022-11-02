@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 6</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            box-shadow: 0 0 2px 0 rgb(82, 82, 82);
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            width: 450px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #69d6da;
+        }
+        label {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+        input {
+            width: 320px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 2px 0 rgb(100, 100, 100);
+            margin: 5px 0;
+        }
+        input:focus{
+            outline: none;
+        }
+        .col {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        select {
+            height: 30px;
+            width: 180px;
+            border: none;
+            box-shadow:  0 0 2px 0 rgb(100, 100, 100);
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        button {
+            width: 100px;
+            border: none;
+            box-shadow:  0 0 2px 0 rgb(100, 100, 100);
+            border-radius: 5px;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(189, 188, 188);
+            transition: .3s;
+        }
+        .out {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .out h3 {
+            font-size: 25px;
+        }
+        .out input {
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Kalkulator Sederhana</h1>
+            <label>Masukan Angka Pertama
+                <input type="text" placeholder=" Masukan angka pertama" id="angka1">
+            </label>
+            <label>Masukan Angka Kedua
+                <input type="text" placeholder=" Masukan angka kedua" id="angka2">
+            </label>
+            <div class="col">
+                <select id="operator">
+                    <option value="tambah">Penjumlahan</option>
+                    <option value="kurang">Pengurangan</option>
+                    <option value="kali">Perkalian</option>
+                    <option value="bagi">Pembagian</option>
+                    <option value="pangkat">Perpangkatan</option>
+                </select>
+                <button id="proses" onclick="hitung()">Submit</button>
+            </div>
+            <div class="out">
+                <h3>Hasil :</h3>
+                <input type="text" id="hasil">
+            </div>
+        </div>
+        <p>copyright &copy; Ahmad Haziq Mu'izzaddin Wafiq</p>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
